@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>calculator</title>
     <link rel="stylesheet" href="calc.css">
+    <script src="calc.js"></script>
 </head>
 <body>
     <div class="body">
@@ -20,7 +21,7 @@
             </div>
         </div>
         <div id="ans" class="answer"></div>
-        <div id="main" class="log">0</div>
+        <div id="main" class="log"></div>
         <div class="mm">
             <div class="dms spa">MC</div>
             <div class="dms spa">MR</div>
@@ -32,38 +33,38 @@
         <div class="numbers">
             <div class="row1">
                 <div class="col1 con">%</div>
-                <div class="col1 con">CE</div>
-                <div class="col1 con">C</div>
-                <div class="col1 con">del</div>
+                <div class="col1 con" id="pclr" onclick="clears('')">CE</div>
+                <div class="col1 con" id="clear" onclick="clears('')">C</div>
+                <div class="col1 con" id="del" onclick="del()">del</div>
             </div>
             <div class="row1">
                 <div style="letter-spacing: -3px;" class="col1 con"><sup>1</sup>/<sub>x</sub></div>
                 <div class="col1 con">x<sup>2</sup></div>
                 <div class="col1 con"><sup>2</sup>srx</div>
-                <div class="col1 con" id="divide" onclick="divide()">/</div>
+                <div class="col1 con" id="divide" onclick="calc('/')">/</div>
             </div>
             <div class="row1">
-                <div class="col1 spe" id="seven" onclick="seven()">7</div>
-                <div class="col1 spe" id="eight" onclick="eight()">8</div>
-                <div class="col1 spe" id="nine" onclick="nine()">9</div>
-                <div style="letter-spacing: -6.5px;" class="col1 con" id="times" onclick="times()">\/</div>
+                <div class="col1 spe" id="seven" onclick="number(7)">7</div>
+                <div class="col1 spe" id="eight" onclick="number(8)">8</div>
+                <div class="col1 spe" id="nine" onclick="number(9)">9</div>
+                <div style="letter-spacing: -6.5px;" class="col1 con" id="times" onclick="calc('*')">\/</div>
             </div>
             <div class="row1">
-                <div class="col1 spe" id="four" onclick="four()">4</div>
-                <div class="col1 spe" id="five" onclick="five()">5</div>
-                <div class="col1 spe" id="six" onclick="six()">6</div>
-                <div class="col1 con" id="min" onclick="min()">-</div>
+                <div class="col1 spe" id="four" onclick="number(4)">4</div>
+                <div class="col1 spe" id="five" onclick="number(5)">5</div>
+                <div class="col1 spe" id="six" onclick="number(6)">6</div>
+                <div class="col1 con" id="min" onclick="calc('-')">-</div>
             </div>
             <div class="row1">
-                <div  class="col1 spe" id="one" onclick="one()">1</div>
-                <div id="two" class="col1 spe " onclick="two()">2</div>
-                <div id="three" class="col1 spe" onclick="three()">3</div>
-                <div id="plus" class="col1 con" onclick="plus()">+</div>
+                <div  class="col1 spe" id="one" onclick="number(1)">1</div>
+                <div id="two" class="col1 spe " onclick="number(2)">2</div>
+                <div id="three" class="col1 spe" onclick="number(3)">3</div>
+                <div id="plus" class="col1 con" onclick="calc('+')">+</div>
             </div>
             <div class="row1">
                 <div style="letter-spacing: -3px;" class="col1 spe"><sup>+</sup>/<sub>-</sub></div>
-                <div class="col1 spe" id="zero" onclick="zero()">0</div>
-                <div class="col1 spe" id="dot" onclick="dot()">.</div>
+                <div class="col1 spe" id="zero" onclick="number(0)">0</div>
+                <div class="col1 spe" id="dot" onclick="number('.')">.</div>
                 <div class="col1" id="equ" onclick="ope()">=</div>
             </div>
         </div>
@@ -71,68 +72,102 @@
 </body>
 </html>
 <script>
-        // var sub = document.getElementById('main').innerText;
+    //     // var sub = document.getElementById('main').innerText;
 
 
 
-    function ope() {
-        // alert('temiiii');
-        var sub = document.getElementById('main').innerText;
-        var c = document.getElementById('ans').innerText;
-        var e = document.getElementById('main').innerText;
-        var f = document.getElementById('ans').innerHTML = c + e +'=';
-        var d = document.getElementById('main') ;
-        d.innerHTML = sub;
+    // function ope() {
+    //     // alert('temiiii');
+    //     // var sub = document.getElementById('main').innerText;
+    //     var a = document.getElementById('ans').innerText;
+    //     var b = document.getElementById('main').innerText;
+    //     var f = document.getElementById('ans').innerHTML = a+b+ '=';
+    //     // var d = document.getElementById('main').innerHTML = null;
         
-    }
-    function one() {
-        document.getElementById('main').innerHTML = '1';
-    }
-    function two() {
-        document.getElementById('main').innerHTML = '2';
-    }
-    function three() {
-        document.getElementById('main').innerHTML = '3';
-    }
-    function four() {
-        document.getElementById('main').innerHTML = '4';
-    }
-    function five() {
-        document.getElementById('main').innerHTML = '5';
-    }
-    function six() {
-        document.getElementById('main').innerHTML = '6';
-    }
-    function seven() {
-        document.getElementById('main').innerHTML = '7';
-    }
-    function eight() {
-        document.getElementById('main').innerHTML = '8';
-    }
-    function nine() {
-        document.getElementById('main').innerHTML = '9';
-    }
-    function zero() {
-        document.getElementById('main').innerHTML = '0';
-    }
-    function plus() {
-        // document.getElementById('main').innerHTML = '+';
-        var sub = document.getElementById('main').innerText;
-        var a = document.getElementById('main').valve = sub;
-        var b = document.getElementById('ans').innerHTML = a + '+';
-    }
-    function min() {
-        document.getElementById('main').innerHTML = '-';
-    }
-    function times() {
-        document.getElementById('main').innerHTML = '*';
-    }
-    function divide() {
-        document.getElementById('main').innerHTML = '/';
-    }
-    function dot() {
-        document.getElementById('main').innerHTML = '.';
-    }
-  
-    
+    // //  }
+    // //  function ope() {
+    //     // var f = document.getElementById('ans').innerHTML = a+b+ '=';
+    //     if ('ans'.innerHTML = f ) {
+    //         var e = parseInt(document.getElementById('main').innerText);
+    //         var c = parseInt(document.getElementById('ans').innerText);
+    //         var pp = '+';
+    //         var pm = '-';
+    //         if (pp == '+') {
+    //            document.getElementById('main').innerHTML= c+e; 
+    //         }else{
+    //         document.getElementById('main').innerHTML= 'hiiiii';
+
+    //         }
+
+    //     } 
+    //     // else if (condition) {
+            
+    //     // }
+           
+    //  }
+        
+        
+   
+    // function clears() {
+    //     document.getElementById('main').innerHTML= '';
+    //     document.getElementById('ans').innerHTML= null;
+    // }
+    // function pclr() {
+    //     document.getElementById('main').innerHTML= '';
+    // }
+    // // function del() {
+    // //     document.getElementById('main').innerHTML= '';
+    // // }
+    // function one() {
+    //     document.getElementById('main').innerHTML += '1';
+    // }
+    // function two() {
+    //     document.getElementById('main').innerHTML += '2';
+    // }
+    // function three() {
+    //     document.getElementById('main').innerHTML += '3';
+    // }
+    // function four() {
+    //     document.getElementById('main').innerHTML += '4';
+    // }
+    // function five() {
+    //     document.getElementById('main').innerHTML = '5';
+    // }
+    // function six() {
+    //     document.getElementById('main').innerHTML = '6';
+    // }
+    // function seven() {
+    //     document.getElementById('main').innerHTML += '7';
+    // }
+    // function eight() {
+    //     document.getElementById('main').innerHTML += '8';
+    // }
+    // function nine() {
+    //     document.getElementById('main').innerHTML += '9';
+    // }
+    // function zero() {
+    //     document.getElementById('main').innerHTML += '0';
+    // }
+    // function plus(oper) {
+    //     // document.getElementById('main').innerHTML = '+';
+    //     var sub = document.getElementById('main').innerText;
+    //     var a = document.getElementById('main').valve = sub;
+    //     var b = document.getElementById('ans').innerHTML = a + oper;
+    //     var c = document.getElementById('main').innerHTML = null;
+
+        
+    // }
+    // function min() {
+    //     document.getElementById('main').innerHTML = '-';
+    // }
+    // function times() {
+    //     document.getElementById('main').innerHTML = '*';
+    // }
+    // function divide() {
+    //     document.getElementById('main').innerHTML = '/';
+    // }
+    // function dot() {
+    //     document.getElementById('main').innerHTML = '.';
+    // }
+   
 </script>

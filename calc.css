@@ -37,17 +37,19 @@ body{
     height: 30px;
     /* background-color: rgb(70, 168, 127); */
     text-align: end;
+    padding-right: 2%;
     color: rgba(209, 199, 199, 0.842);
     font-size: 20px;
     padding-top: 20px;
-    width: 100%;
+    width: 98%;
 }
 .log{
     height: 70px;
     /* background-color: rgb(255, 153, 0); */
     text-align: end;
     font-size: 50px;
-    width: 100%;
+    padding-right: 2%;
+    width: 98%;
 }
 .mm{
     height: 50px;
