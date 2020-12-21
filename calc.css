@@ -1,9 +1,42 @@
+::-webkit-scrollbar {
+    width: 8px;
+    height: 3px;
+    }
+    
+    /* Track */
+    ::-webkit-scrollbar-track {
+    border-radius: 0px;
+    }
+    
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+    /* background: gray;  */
+    border-radius: 0px;
+    
+    }
+    
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+    background: rgb(128, 128, 128); 
+    }
+
+
 *{
     color: whitesmoke;
+}
+#bar{
+    position: relative;
+    background-color: aqua;
+    z-index: 4;
+    width: 400px;
+    height: 592px;
+    display: none;
 }
 body{
     background-color: rgb(78, 90, 80);
     padding: 1% 30% ;
+    z-index: 1;
+
 }
 .body{
     background-color: rgba(41, 49, 43, 0.801);
@@ -27,6 +60,7 @@ body{
     display: flex;
     width: 150px;
     justify-content: space-around;
+    z-index: 2;
 }
 .wd{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -42,14 +76,20 @@ body{
     font-size: 20px;
     padding-top: 20px;
     width: 98%;
+    overflow-x: auto;
+
 }
 .log{
     height: 70px;
     /* background-color: rgb(255, 153, 0); */
     text-align: end;
-    font-size: 50px;
+    font-size: 40px;
     padding-right: 2%;
     width: 98%;
+    overflow-x: auto;
+    scroll-margin: 8px;
+    
+
 }
 .mm{
     height: 50px;

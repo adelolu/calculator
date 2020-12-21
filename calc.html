@@ -12,7 +12,7 @@
         <div class="top"></div>
         <div class="stan">
             <div class="stan1">
-                <div id="bar">bars</div>
+                <div id="bar" onclick="bars()">bars</div>
                 <div class="wd">Standard</div>
                 <div>C</div>
             </div>
@@ -32,22 +32,22 @@
         </div>
         <div class="numbers">
             <div class="row1">
-                <div class="col1 con">%</div>
+                <div class="col1 con" onclick="exp()">%</div>
                 <div class="col1 con" id="pclr" onclick="clears('')">CE</div>
-                <div class="col1 con" id="clear" onclick="clears('')">C</div>
+                <div class="col1 con" id="clear" onclick="clr()">C</div>
                 <div class="col1 con" id="del" onclick="del()">del</div>
             </div>
             <div class="row1">
-                <div style="letter-spacing: -3px;" class="col1 con"><sup>1</sup>/<sub>x</sub></div>
-                <div class="col1 con">x<sup>2</sup></div>
-                <div class="col1 con"><sup>2</sup>srx</div>
+                <div style="letter-spacing: -3px;" class="col1 con" onclick="hall()"><sup>1</sup>/<sub>x</sub></div>
+                <div class="col1 con" onclick="sqra()">x<sup>2</sup></div>
+                <div class="col1 con" onclick="sqr()"><sup>2</sup>_/x</div>
                 <div class="col1 con" id="divide" onclick="calc('/')">/</div>
             </div>
             <div class="row1">
                 <div class="col1 spe" id="seven" onclick="number(7)">7</div>
                 <div class="col1 spe" id="eight" onclick="number(8)">8</div>
                 <div class="col1 spe" id="nine" onclick="number(9)">9</div>
-                <div style="letter-spacing: -6.5px;" class="col1 con" id="times" onclick="calc('*')">\/</div>
+                <div class="col1 con" id="times" onclick="calc('*')">x</div>
             </div>
             <div class="row1">
                 <div class="col1 spe" id="four" onclick="number(4)">4</div>
@@ -62,10 +62,10 @@
                 <div id="plus" class="col1 con" onclick="calc('+')">+</div>
             </div>
             <div class="row1">
-                <div style="letter-spacing: -3px;" class="col1 spe"><sup>+</sup>/<sub>-</sub></div>
+                <div style="letter-spacing: -3px;" class="col1 spe" onclick="pam()"><sup>+</sup>/<sub>-</sub></div>
                 <div class="col1 spe" id="zero" onclick="number(0)">0</div>
                 <div class="col1 spe" id="dot" onclick="number('.')">.</div>
-                <div class="col1" id="equ" onclick="ope()">=</div>
+                <div class="col1" id="equ" onclick="ope()" onclick="del()">=</div>
             </div>
         </div>
     </div>
