@@ -8,6 +8,16 @@ function clr() {
   document.getElementById('main').innerHTML = '';
   document.getElementById('ans').innerHTML = '';
 }
+function dstan(params) {
+  document.getElementById('stan').style.display = 'inherit'
+  document.getElementById('scien').style.display = 'none'
+
+}
+function dscien(params) {
+  document.getElementById('stan').style.display = 'none'
+
+  document.getElementById('scien').style.display = 'inherit'
+}
 function calc(oper) {
   var a =  document.getElementById('main').innerHTML += oper;
   if ('main'!= null) {
@@ -23,82 +33,61 @@ function calc(oper) {
 function ope() {
     
     var a = document.getElementById('main').innerText;
+    // console.log(a);
+
     var b = document.getElementById('ans').innerText;
+    // console.log(b);
+
     var c = document.getElementById('ans').innerHTML = `${b}${a}=`;
+    // console.log(c);
+
     var d = b.charAt(b.length-1);
     // console.log(d);
     var e = parseInt(document.getElementById('main').innerText);
     var f = parseInt(document.getElementById('ans').innerText);
     var g = f+d+e;
+    // console.log(f);
     // console.log(d);
+    // console.log(e);
     // console.log(g);
     
-     main.innerHTML=eval(g);
-     
-      // var aaa = eval(g)
+    // var temi = main.innerHTML='g';
+    //  console.log(temi);
+
+      var aaa = eval(g)
         // return aaa
 // console.log(aaa);
 
-    // function del() {    
-    //   var a = document.getElementById('main').innerHTML;
-    //   if (a== aaa ){
-    //       document.getElementById('ans').innerHTML = null;
-        
-    //   } else {
-    //     var b = a.slice(0,a.length-1)
-    //     main.innerHTML = b;
-    //   }
-    
-    // }
-    // b.search('+')
-    // console.log(b);
-
-    // function calc(oper) {
-    //     var a = c.includes(oper);
-    //     console.log(a);
-    //     // if (a == ) {
-    //     //     document.getElementById('main').innerHTML =eval('a','b');
-    //     //     // console.log(a);
-    //     // } 
-                                                                                                                                                      
-    //   }
-    //  calc('+');  
-    
-    // var c = document.getElementById('ans').innerHTML = `${a}=`;
-    // var d = document.getElementById('main').innerHTML= null;
-    // if ('ans'.innerHTML == c) {
-        // var e = parseInt(document.getElementById('main').innerText);
-        // var f = parseInt(document.getElementById('ans').innerText);
-        // var g = '+';
-        // console.log(g)
-        // console.log(e);
-        // console.log(f);
-    //     // var g = document.getElementById('main').innerHTML=eval("e + f")
-    //     // var g = '+';
-    //     // if ( g = '+') {
-    //     //             //    document.getElementById('main').innerHTML= e+f;
-    //     //             console.log(e + f);
-
-    //     //             }
-    // }
-}
-  // var aaa = ope()
-  // console.log(aaa);
-
-// console.log(aaa);
-// return
-function del() {
-  var a = document.getElementById('main').innerHTML;
-  if (a== aaa ){
-      document.getElementById('ans').innerHTML = null;
-    
-  } else {
-    var b = a.slice(0,a.length-1)
-    main.innerHTML = b;
-  }
+// document.getElementById('main').innerHTML = null;
+document.getElementById('main').innerHTML =' '+aaa;
+// ans.innerHTML = aaa;
 
 }
+ 
+function sdel() {
+  var a = document.getElementById('ans').innerText
+    var b = document.getElementById('main').innerHTML
+    y = b.length
+    z = b.charAt(0)
+    // console.log(z);
+    // console.log(y);
+      if (b == '0') {
+        // console.log('hiiii');
 
+        document.getElementById('main').innerText = '0'
+    }
+    else if (b !== 0 && z !== ' ') {
+        // console.log('sup');
+        c = b.slice(0,b.length-1)
+    var d = document.getElementById('main').innerText = c
+       var m = b.length
+    //    console.log(m);
+       if (m == 1) {
+     document.getElementById('main').innerText = 0
+           
+       }
+}
+}
   
 function sqra() {
     var a =  document.getElementById('main').innerText;
@@ -172,3 +161,9 @@ function pam() {
   // }
 
   // henshaw()
+
+
+ 
+// }
+
+// crazy()

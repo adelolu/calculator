@@ -1,3 +1,57 @@
+/* The side navigation menu */
+.sidenav {
+    height: 542px;
+     /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    /* top: 0; Stay at the top */
+    left: 1%;
+    margin-left: 8px;
+    background-color: #111; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 50px; 
+    /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+  }
+  
+  /* The navigation menu links */
+  .sidenav a {
+    /* padding: 8px 8px 8px 32px; */
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  /* When you mouse over the navigation links, change their color */
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  
+  /* Position and style the close button (top right corner) */
+  .sidenav  {
+    position: absolute;
+    /* top: 0; */
+    right: 25px;
+    font-size: 36px;
+    /* margin-left: 50px; */
+  }
+   .closebtn {
+    position: absolute;
+    top: 0;
+    font-size: 18px;
+    background-color: aquamarine;
+  }
+  
+ 
+
+
+
+
+
+
 ::-webkit-scrollbar {
     width: 8px;
     height: 3px;
@@ -24,6 +78,12 @@
 *{
     color: whitesmoke;
 }
+/* .standard{
+    display: none;
+} */
+.scientific{
+    display: none;
+}
 #bar{
     position: relative;
     background-color: aqua;
@@ -34,15 +94,15 @@
 }
 body{
     background-color: rgb(78, 90, 80);
-    padding: 1% 30% ;
+    padding: 1%;
     z-index: 1;
 
 }
 .body{
-    background-color: rgba(41, 49, 43, 0.801);
+    background-color: rgba(54, 58, 54, 0.801);
     max-width: 400px;
     min-width: 100px;
-    height: 622px;
+    height: 623px;
 }
 .top{
     height: 30px;
@@ -69,7 +129,6 @@ body{
 }
 .answer{
     height: 30px;
-    /* background-color: rgb(70, 168, 127); */
     text-align: end;
     padding-right: 2%;
     color: rgba(209, 199, 199, 0.842);
@@ -77,20 +136,16 @@ body{
     padding-top: 20px;
     width: 98%;
     overflow-x: auto;
-
 }
 .log{
     height: 70px;
-    /* background-color: rgb(255, 153, 0); */
     text-align: end;
     font-size: 40px;
     padding-right: 2%;
     width: 98%;
     overflow-x: auto;
-    scroll-margin: 8px;
-    
-
 }
+
 .mm{
     height: 50px;
     display: flex;
@@ -99,7 +154,6 @@ body{
 .dms{
     width: 65px;
     height:30px;
-    /* background-color: greenyellow; */
     margin: 1px;
     text-align: center;
     padding-top: 20px;
@@ -131,7 +185,7 @@ body{
     background-color: rgba(236, 243, 236, 0.144);
 }
 #equ{
-    background-color:rgba(41, 80, 70, 0.836) ;
+    background-color: rgba(35, 77, 66, 0.836);
 }
 #equ:hover{
     background-color: rgba(65, 160, 152, 0.644);
@@ -142,3 +196,59 @@ body{
 .con{
     background-color: rgba(22, 26, 23, 0.479);
 }
+
+
+
+
+
+.sidenav2{
+    height: 542px;
+     /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    /* top: 0; Stay at the top */
+    left: 1%;
+    margin-left: 8px;
+    background-color: #111; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 50px; 
+    /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+  }
+  
+  /* The navigation menu links */
+  .sidenav2 a {
+    /* padding: 8px 8px 8px 32px; */
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  /* When you mouse over the navigation links, change their color */
+  .sidenav2 a:hover {
+    color: #f1f1f1;
+  }
+  
+  /* Position and style the close button (top right corner) */
+  .sidenav2  {
+    position: absolute;
+    /* top: 0; */
+    right: 25px;
+    font-size: 36px;
+    /* margin-left: 50px; */
+  }
+   .closebtn2 {
+    position: absolute;
+    top: 0;
+    font-size: 18px;
+    background-color: aquamarine;
+  }
+
+
+
+
+
+

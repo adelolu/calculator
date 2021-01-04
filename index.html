@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+    <link rel="stylesheet" href="calc.css">
+    <link rel="stylesheet" href="sciCalc.css">
+    <script src="calc.js"></script>
+    <script src="sciCalc.js"></script>
+</head>
+<body onload="nap()">
+    <div class="body">
+            <div class="top"></div>
+         <div id="stan" class="standard">
+            <div class="stan">
+                <div class="stan1">
+                    <div id="mySidenav" class="sidenav">
+                        <div class="closebtn" onclick="closeNav()">////</div>
+                        <a href="#" onclick="dstan()">Standard</a>
+                        <a href="#" onclick="dscien()">Scientific</a>
+                       
+                    </div>
+                    <div onclick="openNav()">/////</div>
+                    <div id="bar" onclick="bars()">bars</div>
+                    <div class="wd">Standard</div>
+                    <div>C</div>
+                </div>
+                <div>
+                    clo
+                </div>
+            </div>
+            <div id="ans" class="answer"></div>
+            <div id="main" class="log"></div>
+            <div class="mm">
+                <div class="dms spa">MC</div>
+                <div class="dms spa">MR</div>
+                <div class="dms">M+</div>
+                <div class="dms">M-</div>
+                <div class="dms">MS</div>
+                <div class="dms spa">M</div>
+            </div>
+            <div class="numbers">
+                <div class="row1">
+                    <div class="col1 con" onclick="exp()">%</div>
+                    <div class="col1 con" id="pclr" onclick="clears('')">CE</div>
+                    <div class="col1 con" id="clear" onclick="clr()">C</div>
+                    <div class="col1 con" id="del" onclick="sdel()">del</div>
+                </div>
+                <div class="row1">
+                    <div style="letter-spacing: -3px;" class="col1 con" onclick="hall()"><sup>1</sup>/<sub>x</sub></div>
+                    <div class="col1 con" onclick="sqra()">x<sup>2</sup></div>
+                    <div class="col1 con" onclick="sqr()"><sup>2</sup>_/x</div>
+                    <div class="col1 con" id="divide" onclick="calc('/')">/</div>
+                </div>
+                <div class="row1">
+                    <div class="col1 spe" id="seven" onclick="number(7)">7</div>
+                    <div class="col1 spe" id="eight" onclick="number(8)">8</div>
+                    <div class="col1 spe" id="nine" onclick="number(9)">9</div>
+                    <div class="col1 con" id="times" onclick="calc('*')">x</div>
+                </div>
+                <div class="row1">
+                    <div class="col1 spe" id="four" onclick="number(4)">4</div>
+                    <div class="col1 spe" id="five" onclick="number(5)">5</div>
+                    <div class="col1 spe" id="six" onclick="number(6)">6</div>
+                    <div class="col1 con" id="min" onclick="calc('-')">-</div>
+                </div>
+                <div class="row1">
+                    <div  class="col1 spe" id="one" onclick="number(1)">1</div>
+                    <div id="two" class="col1 spe " onclick="number(2)">2</div>
+                    <div id="three" class="col1 spe" onclick="number(3)">3</div>
+                    <div id="plus" class="col1 con" onclick="calc('+')">+</div>
+                </div>
+                <div class="row1">
+                    <div style="letter-spacing: -3px;" class="col1 spe" onclick="pam()"><sup>+</sup>/<sub>-</sub></div>
+                    <div class="col1 spe" id="zero" onclick="number(0)">0</div>
+                    <div class="col1 spe" id="dot" onclick="number('.')">.</div>
+                    <div class="col1" id="equ" onclick="ope()">=</div>
+                </div>
+            </div>
+        </div> 
+        <div id="scien" class="scientific">
+            <div class="stan">
+                <div class="stan1">
+                    <div id="Sidenav" class="sidenav2">
+                        <div class="closebtn2" onclick="close()">////</div>
+                        <a href="#" onclick="dstan()">Standard</a>
+                        <a href="#" onclick="dscien()">Scientific</a>
+                       
+                    </div>
+                    <div onclick="open()">/////</div>
+                    <div id="bar" onclick="bars()">bars</div>
+                    <div class="wd">Scientific</div>
+                    <div>C</div>
+                </div>
+                <!-- <div class="stan1">
+                    <div id="mySidenav" class="sidenav">
+                        <div class="closebtn" onclick="closeNav()">////</div>
+                        <a href="#">About</a>
+                        <a href="#">Services</a>
+                        <a href="#">Clients</a>
+                        <a href="#">Contact</a>
+                    </div>
+                    <div onclick="openNav()">/////</div>
+                    <div class="wd">Scientific</div>
+                    <div>C</div>
+                </div> -->
+                <div>
+                    clo
+                </div>
+            </div>
+            <!--  -->
+            <div id="ansdiv" class="answer"></div>
+            <div id="maindiv" class="logs" ></div>
+            <div class="space"></div>
+            <div class="degree">
+                <div id="deg" class="deg" onclick="chichi()">DEG</div>
+                <div id="fall" class="deg" onclick="bobo()">F-E</div>
+            </div>
+            <div class="smm">
+                <div class="sdms spa" >MC</div>
+                <div class="sdms spa">MR</div>
+                <div class="sdms">M+</div>
+                <div class="sdms">M-</div>
+                <div class="sdms">MS</div>
+                <div class="sdms spa">M</div>
+            </div>
+            <div class="myfun">
+                <div class="spec">
+                    <div class="dropdown">
+                        <div onclick="myFunction()" class="dropbtn">Trigonometry</div>
+                        <div id="myDropdown" class="dropdown-content">
+                            <div id="kind" class="tribabies con" onclick="peace()">2 <sup>nd</sup></div>
+                            <div id="peace" class="tribabies con" onclick="sinhi()" >sin</div>
+                            <div id="joy" class="tribabies con" onclick="coshi()" >cos</div>
+                            <div id="love" class="tribabies con" onclick="tanhi()" >tan</div>
+                            <div id="divine" class="tribabies con" onclick="hyp()" >hyp</div>
+                            <div id="endure" class="tribabies con" onclick="sechi()">sec</div>
+                            <div id="longs" class="tribabies con" onclick="cschi()">csc</div>
+                            <div id="once" class="tribabies con" onclick="cothi()">cot</div>
+                        </div>
+                      </div>
+                </div>    
+                    
+                
+                <div class="spec"> 
+                    <!-- // Function -->
+                    <div class="down">
+                        <div onclick="drop()" class="dropbtn2">Function</div>
+                        <div id="mydown" class="two-content">
+                            <div class="tribabies con" onclick="abs()">|x|</div>
+                            <div class="tribabies con" onclick="sfloor()">|_x|</div>
+                            <div class="tribabies con" onclick="sceil()">|x-|</div>
+                            <div class="tribabies con" onclick="srand()">rand</div>
+                            <div class="tribabies con">-dms</div>
+                            <div class="tribabies con">-deg</div>
+                            <!-- <div class="tribabies con">ses</div> -->
+                        </div>
+                      </div>
+                </div>
+                
+            </div>
+
+            <div class="mymain">
+               <div style="margin-top: 0px;" class="baby">
+                   <div id="ssec" class="babies con" onclick="second()">2 <sup>nd</sup></div>
+                   <div class="babies con" onclick="pie()"> pie </div>
+                   <div class="babies con" onclick="eye()"> e</div>
+                   <div id="cell" class="babies con" onclick="cce()" ></div>
+                   <div class="babies con" onclick="del()">del</div>
+               </div>
+               <div class="baby">
+                    <div id="raise" class="babies con" onclick="ssqu()">x<sup>2</sup></div>
+                    <!-- <div id="raise3" class="babies con">x<sup>3</sup> </div> -->
+                    <div class="babies con" onclick="shall()" ><sup>1</sup>/<sub>x</sub></div>
+                    <div class="babies con" onclick="abs()">|x|</div>
+                    <div class="babies con">exp</div>
+                    <div class="babies con" onclick="modulus()">mod</div>
+               </div>
+               <div class="baby">
+                <div id="power" class="babies con" onclick="ssqur()"><sup>2</sup>_/x</div>
+                <div class="babies con" onclick="brcko()">(</div>
+                <div class="babies con" onclick="brckc()">)</div>
+                <div class="babies con" onclick="pemu()">n!</div>
+                <div class="babies con" onclick="base('/')">/</div>
+               </div>
+               <div class="baby">
+                <div id="maluu" class="babies con" onclick="unknow()">x <sup>y</sup></div>
+                <div class="babies spe" onclick="numbers(7)">7</div>
+                <div class="babies spe" onclick="numbers(8)">8</div>
+                <div class="babies spe" onclick="numbers(9)">9</div>
+                <div class="babies  con" onclick="base('*')">X</div>
+               </div>
+               <div class="baby">
+                <div id="cow" class="babies con" onclick="tens()">10<sup>x</sup></div>
+                <div class="babies spe" onclick="numbers(4)">4</div>
+                <div class="babies spe" onclick="numbers(5)">5</div>
+                <div class="babies spe" onclick="numbers(6)">6</div>
+                <div class="babies con " onclick="base('-')">-</div>
+               </div>
+               <div class="baby">
+                <div id="pig" class="babies con" onclick="logi()">log</div>
+                <div class="babies spe" onclick="numbers(1)">1</div>
+                <div class="babies spe" onclick="numbers(2)">2</div>
+                <div class="babies spe" onclick="numbers(3)">3</div>
+                <div class="babies  con" onclick="base('+')">+</div>
+               </div>
+               <div class="baby">
+                <div id="dog" class="babies con" onclick="lean()">In</div>
+                <div class="babies  spe" onclick="spam()"> <sup>+</sup>/<sub>-</sub></div>
+                <div class="babies  spe" onclick="numbers(0)">0</div>
+                <div class="babies spe" onclick="dot()">.</div>
+                <div class="babies" id="equ" onclick="baby()">=</div> 
+               </div>
+            </div>
+         </div>
+    </div>
+</body>
+</html>
+<script>
+    /* Set the width of the side navigation to 250px */
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+
+/* Set the width of the side navigation to 0 */
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+
+function open() {
+  document.getElementById("Sidenav").style.width = "250px";
+}
+
+/* Set the width of the side navigation to 0 */
+function close() {
+  document.getElementById("Sidenav").style.width = "0";
+}
+
+
+
+
+
+
+
+
+   /* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+// function myFunctiontem() {
+//   document.getElementById("myDropdowntem").classList.toggle("show");
+// }
+
+// // Close the dropdown menu if the user clicks outside of it
+// window.onclick = function(event) {
+//   if (!event.target.matches('.dropbtn')) {
+//     var dropdowns = document.getElementsByClassName("two");
+//     var i;
+//     for (i = 0; i < dropdowns.length; i++) {
+//       var openDropdown = dropdowns[i];
+     
+//   }
+// }
+
+
+// }
+(function emma() {
+    var jesus = document.getElementById("maindiv").innerText;
+
+    if (jesus =='') {
+       document.getElementById('cell').innerText='C'
+        // console.log('jj');        
+    } else if(jesus !== '') {
+       document.getElementById('cell').innerText='CE'
+
+    }
+})();
+
+
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+    
+    }
+  }
+}
+
+
+
+function drop() {
+  document.getElementById("mydown").classList.toggle("show");
+}
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn2')) {
+    var dropdown = document.getElementsByClassName("two-content");
+    var i;
+    for (i = 0; i < dropdown.length; i++) {
+      var openDropdown = dropdown[i];
+    
+    }
+  }
+}
+
+
+
+
+
+// function floor() {
+//   document.getElementById("head").classList.toggle("show");
+// }
+// window.onclick = function(event) {
+//   if (!event.target.matches('.dropbtn')) {
+//     var dropdowns = document.getElementsByClassName("two");
+//     var i;
+//     for (i = 0; i < dropdowns.length; i++) {
+//       var openDropdown = dropdowns[i];
+//     }
+//   }
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    //     // var sub = document.getElementById('main').innerText;
+
+
+
+    // function ope() {
+    //     // alert('temiiii');
+    //     // var sub = document.getElementById('main').innerText;
+    //     var a = document.getElementById('ans').innerText;
+    //     var b = document.getElementById('main').innerText;
+    //     var f = document.getElementById('ans').innerHTML = a+b+ '=';
+    //     // var d = document.getElementById('main').innerHTML = null;
+        
+    // //  }
+    // //  function ope() {
+    //     // var f = document.getElementById('ans').innerHTML = a+b+ '=';
+    //     if ('ans'.innerHTML = f ) {
+    //         var e = parseInt(document.getElementById('main').innerText);
+    //         var c = parseInt(document.getElementById('ans').innerText);
+    //         var pp = '+';
+    //         var pm = '-';
+    //         if (pp == '+') {
+    //            document.getElementById('main').innerHTML= c+e; 
+    //         }else{
+    //         document.getElementById('main').innerHTML= 'hiiiii';
+
+    //         }
+
+    //     } 
+    //     // else if (condition) {
+            
+    //     // }
+           
+    //  }
+        
+        
+   
+    // function clears() {
+    //     document.getElementById('main').innerHTML= '';
+    //     document.getElementById('ans').innerHTML= null;
+    // }
+    // function pclr() {
+    //     document.getElementById('main').innerHTML= '';
+    // }
+    // // function del() {
+    // //     document.getElementById('main').innerHTML= '';
+    // // }
+    // function one() {
+    //     document.getElementById('main').innerHTML += '1';
+    // }
+    // function two() {
+    //     document.getElementById('main').innerHTML += '2';
+    // }
+    // function three() {
+    //     document.getElementById('main').innerHTML += '3';
+    // }
+    // function four() {
+    //     document.getElementById('main').innerHTML += '4';
+    // }
+    // function five() {
+    //     document.getElementById('main').innerHTML = '5';
+    // }
+    // function six() {
+    //     document.getElementById('main').innerHTML = '6';
+    // }
+    // function seven() {
+    //     document.getElementById('main').innerHTML += '7';
+    // }
+    // function eight() {
+    //     document.getElementById('main').innerHTML += '8';
+    // }
+    // function nine() {
+    //     document.getElementById('main').innerHTML += '9';
+    // }
+    // function zero() {
+    //     document.getElementById('main').innerHTML += '0';
+    // }
+    // function plus(oper) {
+    //     // document.getElementById('main').innerHTML = '+';
+    //     var sub = document.getElementById('main').innerText;
+    //     var a = document.getElementById('main').valve = sub;
+    //     var b = document.getElementById('ans').innerHTML = a + oper;
+    //     var c = document.getElementById('main').innerHTML = null;
+
+        
+    // }
+    // function min() {
+    //     document.getElementById('main').innerHTML = '-';
+    // }
+    // function times() {
+    //     document.getElementById('main').innerHTML = '*';
+    // }
+    // function divide() {
+    //     document.getElementById('main').innerHTML = '/';
+    // }
+    // function dot() {
+    //     document.getElementById('main').innerHTML = '.';
+    // }
+</script>
