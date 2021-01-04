@@ -78,12 +78,12 @@
 *{
     color: whitesmoke;
 }
-/* .standard{
-    display: none;
-} */
-.scientific{
+.standard{
     display: none;
 }
+/* .scientific{
+    display: none;
+} */
 #bar{
     position: relative;
     background-color: aqua;
