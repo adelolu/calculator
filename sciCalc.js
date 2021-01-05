@@ -35,7 +35,7 @@ function cce (params) {
    var c = document.getElementById('cell').innerText
 //    console.log(b);
    if (c == 'CE') {
-    if ( a != 0 || b == ' ') {
+    if ( a != 0 || b == ' ' || b !== ' ')  {
         document.getElementById('maindiv').innerText = '0'
         document.getElementById('ansdiv').innerText = ' '
         // if (a == '0' && b == ' ') {
@@ -43,6 +43,9 @@ function cce (params) {
         //    }
     }
     
+   }else if (c =='C') {
+    document.getElementById('ansdiv').innerText = ' '
+    document.getElementById('maindiv').innerText = '0'
    }
    
 }
@@ -127,21 +130,13 @@ function second() {
 }
 function nap() {
     var a = document.getElementById('maindiv').innerText ;
-//   console.log(a);
   if (a == '') {
     var b = document.getElementById('maindiv').innerText= 0; 
   } else {
-      
   }
-  lolo = document.getElementById('maindiv').innerText
-    // console.log(lolo);
-
 }
-
-
 function chichi() {
     var a = document.getElementById('deg').innerText;
-    // console.log(a);
     if (a == 'DEG') {
       a =  document.getElementById('deg').innerText= 'RAD'  
     } else if (a == 'RAD') {
@@ -149,18 +144,13 @@ function chichi() {
     }else if (a == 'GRAD') {
         document.getElementById('deg').innerText='DEG'
     }
-        
-    
 }
 function bobo() {
     var a = document.getElementById('fall').style.borderBottomColor;
-    // console.log(a);
     if (a == '') {
-    document.getElementById('fall').style.borderBottomColor = 'rgb(35, 77, 66)'
-        
+    document.getElementById('fall').style.borderBottomColor = 'rgb(35, 77, 66)'  
     }else{
     document.getElementById('fall').style.borderBottomColor = ''
-
     }
 }
 // start bracket open code 
@@ -181,17 +171,14 @@ function brcko() {
     }
 }
 // end 
-
 function brckc() {
     var z= document.getElementById('ansdiv').innerText
-    // console.log();
    if (z === '') {
        document.getElementById('ansdiv').innerText=''
    }else if(z !== ''){
     var b = document.getElementById('maindiv').innerText
     var d = document.getElementById('ansdiv').innerHTML
     var w = document.getElementById('ansdiv').innerHTML += b+')'
-    // console.log(d);
     var e = d.substring(1,d.length-1)
     var c = d.substring(d.length-1)
     // console.log(e);
@@ -201,16 +188,16 @@ function brckc() {
     if (c == '+') {
     // console.log(g);
       var g = f+h;
-      document.getElementById('maindiv').innerText = g; 
+      document.getElementById('maindiv').innerText =' '+ g; 
     }else if (c == '-') {
         var g = f-h;
-        document.getElementById('maindiv').innerText = g; 
+        document.getElementById('maindiv').innerText =' '+  g; 
     }else if (c == '*') {
         var g = f*h;
-        document.getElementById('maindiv').innerText = g; 
+        document.getElementById('maindiv').innerText =' '+  g; 
     }else if (c == '/') {
         var g = f/h;
-        document.getElementById('maindiv').innerText = g; 
+        document.getElementById('maindiv').innerText = ' '+ g; 
     }
    }
 }
@@ -235,7 +222,7 @@ function base(bade) {
     }
     else if(tomtom = true ){
         console.log('sup');
-        // var a = document.getElementById('maindiv').innerText
+        var a = document.getElementById('maindiv').innerText
         console.log(a);
         var b = document.getElementById('ansdiv').innerText = '(' + a + bade;
         document.getElementById('maindiv').innerText ='';
@@ -257,31 +244,25 @@ function baby() {
     var r = z.includes('^')
     var p = z.includes('yroot')
     var q = z.includes('mod')
-    // console.log(q);
-    // console.log(z);
-    // console.log(t);
+    aa = z.includes('abs')
+    ab = z.includes('1/')
+    // console.log(ab);
     oo = isNaN(t)
-    // console.log(oo);
-    // console.log(o);
-    if (x !== '(' && r == false && p == false && q == false )  {
-       var a = document.getElementById('ansdiv').innerText;
+
+
+    if (x !== '(' && r == false && p == false && q == false && aa == false && ab == false)  {
+    console.log('tems');
+        var a = document.getElementById('ansdiv').innerText;
     var b = document.getElementById('maindiv').innerText;
-    // console.log(a);
     var c = a.substring(a.length-1)
     var d = a.substring(0 , a.length-1)
-    // console.log(c);
-    // console.log(b);
-    // console.log(d);
     document.getElementById('ansdiv').innerText = a + b +'=';
     var e = parseInt(d);
     var f = parseInt(b);
-    // var g = parseInt(g)
     if (c == '+') {
-    // console.log(g);
       var g = e+f;
-      laa= document.getElementById('maindiv').innerText = ' '+g; 
+      laa= document.getElementById('maindiv').innerText = ' '+ g; 
       lau = laa.charAt(0)
-    //   console.log(lau);
     }else if (c == '-') {
         var g = e-f;
         document.getElementById('maindiv').innerText = ' '+g; 
@@ -339,10 +320,27 @@ function baby() {
         // console.log(ab);
         document.getElementById('ansdiv').innerText =`${z} ${aa}=`
         document.getElementById('maindiv').innerText = ' '+ab % aa
+    }else if (aa == true) {
+        document.getElementById('maindiv').innerText
+    }else if (ab == true) {
+    var ba = document.getElementById('maindiv').innerText
+      bb = document.getElementById('ansdiv').innerText
+      bd = bb.includes('1/')
+       if (bd= true) {
+        bc =ba+'='
+       document.getElementById('ansdiv').innerText = bc;
+       }
     }
-    // else {
-    //     console.log('nah');
-    // }
+     
+    
+    else if (ab == false) {
+        console.log('bbuuu');
+        document.getElementById('ansdiv').innerText = ' 0'
+        var de =document.getElementById('maindiv').innerText
+        document.getElementById('ansdiv').innerText = ' 0'
+        // document.getElementById('ansdiv').innerText =de+'=';
+    }
+    
     
 }
 function spam() {
@@ -366,17 +364,19 @@ function abs(params) {
         var a = document.getElementById('maindiv').innerText;
     var b =document.getElementById('ansdiv').innerText = 'abs('+a +')'
     var c = a.includes('-')
-    if (c = true) {
+    console.log(c);
+    if (c === true) {
         document.getElementById('maindiv').innerText= a.slice(1);
+    console.log('sup');
+    }
+
+    if (c = false){
+        console.log('hi');
+     document.getElementById('maindiv').innerText = a;
     }
 
     }
-    // var d = document.getElementById('maindiv').innerText;
-    // if (d = String ) {
-    //     console.log('meee');
-    //     document.getElementById('ansdiv').innerText = 'abs('+b+')'
-    // }
-    // console.log(e);
+    
 
 }
 function ssqu() {
@@ -409,27 +409,31 @@ function ssqu() {
 }
 function ssqur() {
     var z = document.getElementById('power').innerHTML;
-    // console.log(z);
+    var bush = document.getElementById('ansdiv').innerText
+    var a = document.getElementById('maindiv').innerText;
+    y = a.includes('-')
     if (z == '<sup>2</sup>_/x') {
-        var bush = document.getElementById('ansdiv').innerText
         if (bush == '') {
             var a = document.getElementById('maindiv').innerText;
         var b =document.getElementById('ansdiv').innerText = '_/('+a +')'
-        document.getElementById('maindiv').innerText = Math.sqrt(a);
+        document.getElementById('maindiv').innerText =' '+ Math.sqrt(a);
         // var c = a.includes('-')
         // if (c = true) {
         //     document.getElementById('maindiv').innerText= a.slice(1);
         }
     }else if (z =='<sup>3</sup>_/x') {
-        var bush = document.getElementById('ansdiv').innerText
+        // var bush = document.getElementById('ansdiv').innerText
         if (bush == '') {
-            var a = document.getElementById('maindiv').innerText;
+            // var a = document.getElementById('maindiv').innerText;
             var b =document.getElementById('ansdiv').innerText = `cuberoot(${a})`
-            document.getElementById('maindiv').innerText = Math.cbrt(a);
+            document.getElementById('maindiv').innerText = ' '+Math.cbrt(a);
         // var c = a.includes('-')
         // if (c = true) {
         //     document.getElementById('maindiv').innerText= a.slice(1);
         }
+    }
+    if (y === true) {
+        document.getElementById('maindiv').innerText = 'Invalid input';
     }
   
 
@@ -495,19 +499,19 @@ function logi() {
    if (z == 'log') {
     if (a == 0) {
         document.getElementById('ansdiv').innerText = `log(0)`
-        document.getElementById('maindiv').innerText= 'Invalid input'
+        document.getElementById('maindiv').innerText= ' '+ 'Invalid input'
     }else if (a == 'Invalid input') {
         document.getElementById('ansdiv').innerText = `log(0)`
-        document.getElementById('maindiv').innerText= 'Invalid input'
+        document.getElementById('maindiv').innerText= ' '+'Invalid input'
     }
     else if (0 <a> 0){
         document.getElementById('ansdiv').innerText = `log(${a}`
-        document.getElementById('maindiv').innerText = `${Math.LOG10E}${a}`
+        document.getElementById('maindiv').innerText = ' '+`${Math.LOG10E}${a}`
     }
    }else if (z == '2<sup>x</sup>') {
     t = document.getElementById('maindiv').innerText
     document.getElementById('ansdiv').innerText = `2^(${t})`
-  document.getElementById('maindiv').innerText = Math.pow(2,t)
+  document.getElementById('maindiv').innerText = ' '+Math.pow(2,t)
    }
 }
 function lean() {
@@ -517,20 +521,20 @@ function lean() {
     var a = document.getElementById('maindiv').innerText
     if (a == 0) {
         document.getElementById('ansdiv').innerText = `In(0)`
-        document.getElementById('maindiv').innerText= 'Invalid input'
+        document.getElementById('maindiv').innerText= ' '+'Invalid input'
     }else if (a == 'Invalid input') {
         document.getElementById('ansdiv').innerText = `In(0)`
-        document.getElementById('maindiv').innerText= 'Invalid input'
+        document.getElementById('maindiv').innerText= ' '+'Invalid input'
     }
     else if (0 <a> 0){
         document.getElementById('ansdiv').innerText = `In(${a})`
-        document.getElementById('maindiv').innerText = `${Math.LN10}${a}`
+        document.getElementById('maindiv').innerText = ' '+`${Math.LN10}${a}`
     }
   } 
   else if ( z == 'e<sup>x</sup>') {
       t = document.getElementById('maindiv').innerText
     document.getElementById('ansdiv').innerText = `e^(${t})`
-  document.getElementById('maindiv').innerText = Math.pow(Math.E,t)
+  document.getElementById('maindiv').innerText = ' '+Math.pow(Math.E,t)
   }
       
   
@@ -542,10 +546,10 @@ function shall(params) {
         var a = document.getElementById('maindiv').innerText ;
         if (a == 0) {
           var b = document.getElementById('ansdiv').innerText= '1/(0)'
-           maindiv.innerText = 'Cannot divide by zero'
+           maindiv.innerText =' '+ 'Cannot divide by zero'
         } else {
           var b = document.getElementById('ansdiv').innerText= `1/(${a})`
-          maindiv.innerText = eval('1/a')
+          maindiv.innerText = ' '+eval('1/a')
         }
 }
 
@@ -606,16 +610,16 @@ function sinhi() {
     var a = document.getElementById('peace').innerHTML;
     if (a === 'sin') {
         document.getElementById('ansdiv').innerText = `sin(${b})`
-        document.getElementById('maindiv').innerText = Math.sin(b)
+        document.getElementById('maindiv').innerText = ' '+Math.sin(b)
     }
     else if (a === 'sin<sup>-1</sup>') {
         // b = document.getElementById('manindiv').innerText
-        document.getElementById('ansdiv').innerHTML = `sin<sup>-1</sup>(${b})`
+        document.getElementById('ansdiv').innerHTML = ' '+`sin<sup>-1</sup>(${b})`
         c = Math.sin(b)
         document.getElementById('maindiv').innerText = 1/c;
     }else if (a === 'sinh') {
         document.getElementById('ansdiv').innerText = `sinh(${b})`
-        document.getElementById('maindiv').innerText = Math.sinh(b)
+        document.getElementById('maindiv').innerText = ' '+Math.sinh(b)
     }
 }
 function coshi() {
@@ -623,16 +627,16 @@ function coshi() {
     var a = document.getElementById('joy').innerHTML;
     if (a === 'cos') {
         document.getElementById('ansdiv').innerText = `cos(${b})`
-        document.getElementById('maindiv').innerText = Math.cos(b)
+        document.getElementById('maindiv').innerText = ' '+Math.cos(b)
     }
     else if (a === 'cos<sup>-1</sup>') {
         // b = document.getElementById('manindiv').innerText
         document.getElementById('ansdiv').innerHTML = `cos<sup>-1</sup>(${b})`
         c = Math.cos(b)
-        document.getElementById('maindiv').innerText = 1/c;
+        document.getElementById('maindiv').innerText = ' '+1/c;
     }else if (a === 'cosh') {
         document.getElementById('ansdiv').innerText = `cosh(${b})`
-        document.getElementById('maindiv').innerText = Math.cosh(b)
+        document.getElementById('maindiv').innerText = ' '+Math.cosh(b)
     }
 }
 function tanhi() {
@@ -640,16 +644,16 @@ function tanhi() {
     var a = document.getElementById('love').innerHTML;
     if (a === 'tan') {
         document.getElementById('ansdiv').innerText = `tan(${b})`
-        document.getElementById('maindiv').innerText = Math.tan(b)
+        document.getElementById('maindiv').innerText = ' '+Math.tan(b)
     }
     else if (a === 'tan<sup>-1</sup>') {
         // b = document.getElementById('manindiv').innerText
         document.getElementById('ansdiv').innerHTML = `tan<sup>-1</sup>(${b})`
         c = Math.tan(b)
-        document.getElementById('maindiv').innerText = 1/c;
+        document.getElementById('maindiv').innerText = ' '+1/c;
     }else if (a === 'tanh') {
         document.getElementById('ansdiv').innerText = `tanh(${b})`
-        document.getElementById('maindiv').innerText = Math.tanh(b)
+        document.getElementById('maindiv').innerText = ' '+Math.tanh(b)
     }
 }
 function sechi() {
@@ -657,16 +661,16 @@ function sechi() {
     var a = document.getElementById('endure').innerHTML;
     if (a === 'sec') {
         document.getElementById('ansdiv').innerText = `sec(${b})`
-        document.getElementById('maindiv').innerText = 1/Math.cos(b)
+        document.getElementById('maindiv').innerText = ' '+1/Math.cos(b)
     }
     else if (a === 'sec<sup>-1</sup>') {
         // b = document.getElementById('manindiv').innerText
         document.getElementById('ansdiv').innerHTML = `sec<sup>-1</sup>(${b})`
         c = 1/Math.cos(b)
-        document.getElementById('maindiv').innerText = 1/c;
+        document.getElementById('maindiv').innerText = ' '+1/c;
     }else if (a === 'sech') {
         document.getElementById('ansdiv').innerText = `sech(${b})`
-        document.getElementById('maindiv').innerText = 1/Math.cosh(b)
+        document.getElementById('maindiv').innerText = ' '+1/Math.cosh(b)
     }
 }
 function cschi() {
@@ -674,16 +678,16 @@ function cschi() {
     var a = document.getElementById('longs').innerHTML;
     if (a === 'csc') {
         document.getElementById('ansdiv').innerText = `csc(${b})`
-        document.getElementById('maindiv').innerText = 1/Math.sin(b)
+        document.getElementById('maindiv').innerText =' '+ 1/Math.sin(b)
     }
     else if (a === 'csc<sup>-1</sup>') {
         // b = document.getElementById('manindiv').innerText
         document.getElementById('ansdiv').innerHTML = `csc<sup>-1</sup>(${b})`
         c = 1/Math.sin(b)
-        document.getElementById('maindiv').innerText = 1/c;
+        document.getElementById('maindiv').innerText = ' '+1/c;
     }else if (a === 'csch') {
         document.getElementById('ansdiv').innerText = `csch(${b})`
-        document.getElementById('maindiv').innerText = 1/Math.sinh(b)
+        document.getElementById('maindiv').innerText = ' '+1/Math.sinh(b)
     }
 }
 function cothi() {
@@ -691,16 +695,16 @@ function cothi() {
     var a = document.getElementById('once').innerHTML;
     if (a === 'cot') {
         document.getElementById('ansdiv').innerText = `cot(${b})`
-        document.getElementById('maindiv').innerText = 1/Math.tan(b)
+        document.getElementById('maindiv').innerText =' '+ 1/Math.tan(b)
     }
     else if (a === 'cot<sup>-1</sup>') {
         // b = document.getElementById('manindiv').innerText
         document.getElementById('ansdiv').innerHTML = `cot<sup>-1</sup>(${b})`
-        c = 1/Math.tan(b)
-        document.getElementById('maindiv').innerText = 1/c;
+        c =1/Math.tan(b)
+        document.getElementById('maindiv').innerText =' '+ 1/c;
     }else if (a === 'coth') {
         document.getElementById('ansdiv').innerText = `coth(${b})`
-        document.getElementById('maindiv').innerText = 1/Math.tanh(b)
+        document.getElementById('maindiv').innerText =' '+ 1/Math.tanh(b)
     }
 }
 function hyp() {
@@ -762,7 +766,7 @@ function sceil(params) {
      //  console.log(z);
     } else{
         document.getElementById('ansdiv').innerText = `ceil(${a})`
-        document.getElementById('maindiv').innerText= Math.ceil(a)
+        document.getElementById('maindiv').innerText= ' '+ Math.ceil(a)
     }
 }
 function sfloor(params) {
@@ -772,11 +776,11 @@ function sfloor(params) {
      //  console.log(z);
     } else{
         document.getElementById('ansdiv').innerText = `floor(${a})`
-        document.getElementById('maindiv').innerText= Math.floor(a)
+        document.getElementById('maindiv').innerText= ' '+Math.floor(a)
     }
 }
 function srand(params) {
-    document.getElementById('maindiv').innerText = Math.random()
+    document.getElementById('maindiv').innerText =' '+ Math.random()
 }
 function dot(params) {
     var a = document.getElementById('maindiv').innerText += '.'
