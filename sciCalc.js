@@ -317,7 +317,6 @@ function baby() {
     }else if (q == true) {
         aa = document.getElementById('maindiv').innerText
         ab = z.slice(0, z.length-4)
-        // console.log(ab);
         document.getElementById('ansdiv').innerText =`${z} ${aa}=`
         document.getElementById('maindiv').innerText = ' '+ab % aa
     }else if (aa == true) {
