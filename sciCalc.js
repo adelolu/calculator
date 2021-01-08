@@ -211,9 +211,7 @@ function base(bade) {
 
     var z = document.getElementById('ansdiv').innerText;
     var c = z.includes('=')
-    console.log(tomtom);
     if (c = true && tomtom == false) {
-        console.log('hiii');
         document.getElementById('ansdiv').innerText = a
         var a = document.getElementById('maindiv').innerText
         var b = document.getElementById('ansdiv').innerText += a + bade;
@@ -246,11 +244,12 @@ function baby() {
     var q = z.includes('mod')
     aa = z.includes('abs')
     ab = z.includes('1/')
-    // console.log(ab);
+    ad = z.includes('=')
+    console.log(ad);
     oo = isNaN(t)
 
 
-    if (x !== '(' && r == false && p == false && q == false && aa == false && ab == false)  {
+    if (x !== '(' && r == false && p == false && q == false && aa == false && ab == false && ad == false)  {
     console.log('tems');
         var a = document.getElementById('ansdiv').innerText;
     var b = document.getElementById('maindiv').innerText;
@@ -336,7 +335,7 @@ function baby() {
         console.log('bbuuu');
         document.getElementById('ansdiv').innerText = ' 0'
         var de =document.getElementById('maindiv').innerText
-        document.getElementById('ansdiv').innerText = ' 0'
+        document.getElementById('ansdiv').innerText = `${de}=`
         // document.getElementById('ansdiv').innerText =de+'=';
     }
     
@@ -607,103 +606,115 @@ function peace() {
 function sinhi() {
     var b = document.getElementById('maindiv').innerText ;
     var a = document.getElementById('peace').innerHTML;
+    var pi = Math.PI
+    var rad = b* (pi/180)
+
     if (a === 'sin') {
         document.getElementById('ansdiv').innerText = `sin(${b})`
-        document.getElementById('maindiv').innerText = ' '+Math.sin(b)
+        document.getElementById('maindiv').innerText = ' '+Math.sin(rad)
     }
     else if (a === 'sin<sup>-1</sup>') {
         // b = document.getElementById('manindiv').innerText
         document.getElementById('ansdiv').innerHTML = ' '+`sin<sup>-1</sup>(${b})`
-        c = Math.sin(b)
+        c = Math.sin(rad)
         document.getElementById('maindiv').innerText = 1/c;
     }else if (a === 'sinh') {
         document.getElementById('ansdiv').innerText = `sinh(${b})`
-        document.getElementById('maindiv').innerText = ' '+Math.sinh(b)
+        document.getElementById('maindiv').innerText = ' '+Math.sinh(rad)
     }
 }
 function coshi() {
     var b = document.getElementById('maindiv').innerText ;
     var a = document.getElementById('joy').innerHTML;
+    var pi = Math.PI
+    var rad = b* (pi/180)
     if (a === 'cos') {
         document.getElementById('ansdiv').innerText = `cos(${b})`
-        document.getElementById('maindiv').innerText = ' '+Math.cos(b)
+        document.getElementById('maindiv').innerText = ' '+Math.cos(rad)
     }
     else if (a === 'cos<sup>-1</sup>') {
         // b = document.getElementById('manindiv').innerText
         document.getElementById('ansdiv').innerHTML = `cos<sup>-1</sup>(${b})`
-        c = Math.cos(b)
+        c = Math.cos(rad)
         document.getElementById('maindiv').innerText = ' '+1/c;
     }else if (a === 'cosh') {
         document.getElementById('ansdiv').innerText = `cosh(${b})`
-        document.getElementById('maindiv').innerText = ' '+Math.cosh(b)
+        document.getElementById('maindiv').innerText = ' '+Math.coshcos(rad)
     }
 }
 function tanhi() {
     var b = document.getElementById('maindiv').innerText ;
     var a = document.getElementById('love').innerHTML;
+    var pi = Math.PI
+    var rad = b* (pi/180)
     if (a === 'tan') {
         document.getElementById('ansdiv').innerText = `tan(${b})`
-        document.getElementById('maindiv').innerText = ' '+Math.tan(b)
+        document.getElementById('maindiv').innerText = ' '+Math.tancos(rad)
     }
     else if (a === 'tan<sup>-1</sup>') {
         // b = document.getElementById('manindiv').innerText
         document.getElementById('ansdiv').innerHTML = `tan<sup>-1</sup>(${b})`
-        c = Math.tan(b)
+        c = Math.tancos(rad)
         document.getElementById('maindiv').innerText = ' '+1/c;
     }else if (a === 'tanh') {
         document.getElementById('ansdiv').innerText = `tanh(${b})`
-        document.getElementById('maindiv').innerText = ' '+Math.tanh(b)
+        document.getElementById('maindiv').innerText = ' '+Math.tanhcos(rad)
     }
 }
 function sechi() {
     var b = document.getElementById('maindiv').innerText ;
     var a = document.getElementById('endure').innerHTML;
+    var pi = Math.PI
+    var rad = b* (pi/180)
     if (a === 'sec') {
         document.getElementById('ansdiv').innerText = `sec(${b})`
-        document.getElementById('maindiv').innerText = ' '+1/Math.cos(b)
+        document.getElementById('maindiv').innerText = ' '+1/Math.cos(rad)
     }
     else if (a === 'sec<sup>-1</sup>') {
-        // b = document.getElementById('manindiv').innerText
         document.getElementById('ansdiv').innerHTML = `sec<sup>-1</sup>(${b})`
-        c = 1/Math.cos(b)
+        c = 1/Math.cos(rad)
         document.getElementById('maindiv').innerText = ' '+1/c;
     }else if (a === 'sech') {
         document.getElementById('ansdiv').innerText = `sech(${b})`
-        document.getElementById('maindiv').innerText = ' '+1/Math.cosh(b)
+        document.getElementById('maindiv').innerText = ' '+1/Math.coshcos(rad)
     }
 }
 function cschi() {
     var b = document.getElementById('maindiv').innerText ;
     var a = document.getElementById('longs').innerHTML;
+    var pi = Math.PI
+    var rad = b* (pi/180)
     if (a === 'csc') {
         document.getElementById('ansdiv').innerText = `csc(${b})`
-        document.getElementById('maindiv').innerText =' '+ 1/Math.sin(b)
+        document.getElementById('maindiv').innerText =' '+ 1/Math.sincos(rad)
     }
     else if (a === 'csc<sup>-1</sup>') {
         // b = document.getElementById('manindiv').innerText
         document.getElementById('ansdiv').innerHTML = `csc<sup>-1</sup>(${b})`
-        c = 1/Math.sin(b)
+        c = 1/Math.sincos(rad)
         document.getElementById('maindiv').innerText = ' '+1/c;
     }else if (a === 'csch') {
         document.getElementById('ansdiv').innerText = `csch(${b})`
-        document.getElementById('maindiv').innerText = ' '+1/Math.sinh(b)
+        document.getElementById('maindiv').innerText = ' '+1/Math.sinhcos(rad)
     }
 }
 function cothi() {
     var b = document.getElementById('maindiv').innerText ;
     var a = document.getElementById('once').innerHTML;
+    var pi = Math.PI
+    var rad = b* (pi/180)
     if (a === 'cot') {
         document.getElementById('ansdiv').innerText = `cot(${b})`
-        document.getElementById('maindiv').innerText =' '+ 1/Math.tan(b)
+        document.getElementById('maindiv').innerText =' '+ 1/Math.tancos(rad)
     }
     else if (a === 'cot<sup>-1</sup>') {
         // b = document.getElementById('manindiv').innerText
         document.getElementById('ansdiv').innerHTML = `cot<sup>-1</sup>(${b})`
-        c =1/Math.tan(b)
+        c =1/Math.tan(rad)
         document.getElementById('maindiv').innerText =' '+ 1/c;
     }else if (a === 'coth') {
         document.getElementById('ansdiv').innerText = `coth(${b})`
-        document.getElementById('maindiv').innerText =' '+ 1/Math.tanh(b)
+        document.getElementById('maindiv').innerText =' '+ 1/Math.tanhtan(rad)
     }
 }
 function hyp() {
